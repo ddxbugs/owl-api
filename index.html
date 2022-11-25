@@ -3,74 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
         <title>Overwatch Developer API</title>
         <style>
-            #banner {
-                position: relative;
-                width: 100;
-            }
-            .liveMatch {
-                color: #43484c;
-                font-size: 20px;
-                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                font-style: italic;
-                font-weight: 3em;
-            }
-            #map {
-                height: 25%;
-            }
-            #profiles {
-                margin: auto;
-            }
+            
         </style>
-        <script type="text/javascript" src="index.js"></script>
-        <!-- <script type="text/javascript" src="js/heroes.js"></script> -->
-        <!-- <script type="text/javascript" src="js/battlenet.js"></script> -->
-        <!-- <script type="text/javascript" src="js/league.js"></script> -->
+        
     </head>
     <body>
+        
         <nav class="navbar navbar-dark bg-primary mb-3">
             <div class="container">
                 <a href="#" class="navbar-brand">Overwatch API</a>
             </div>
         </nav>
+
         <ul class="nav nav-tab"  role="tablist">
-            <li class="nav-item"><a class="nav-link active" id="hero-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true" alt="Hero Selection Tab">Overwatch Heroes</a></li>
+            <li class="nav-item"><a class="nav-link active" id="hero-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">Overwatch Heroes</a></li>
             <li class="nav-item"><a class="nav-link" id="search-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="true">Search Battle.net</a></li>
             <li class="nav-item"><a class="nav-link" id="owl-tab" data-toggle="tab" href="#" role="tab" aria-controls="owl" aria-selected="true" >Overwatch League</a></li>
         </ul>
-        <div class="heroes"></div>
-        <div class="battlenet">
+
+        <div class="heroes" onload="index.js"></div>  
+        
+        <!-- <div class="battlenet">
             <section>
                 <div class="container searchContainer">
-                    <div class="searc card card-body">
+                    <div class="search card card-body">
                         <h1>Search Blizzard Battletag</h1>
                         <p class="lead">Enter a username</p>
-                        <input type="text" class="form-control" id="battletag"  placeholder="format: Battletag-BattleId ex (GamerTag-XXXXX)">
+                        <input type="text" class="form-control" id="battletag"  placeholder="format: Battletag-BattleId ex. (GamerTag-XXXXX)">
                     </div>
                 </div>
             </section>
-        </div>        
-        <div class="league">
+        </div>         -->
+        
+        <!-- <div class="league">
             <section>
                 <h1>World Map</h1>
-                <!-- map -->
             </section>
             <section>
                 <h1>Overwatch League Schedule</h1>
-                <!-- schedule -->
             </section>
-        </div>
+        </div>     -->
+        
+            <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-        <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
 
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"> -->
     </body>
 </html>
