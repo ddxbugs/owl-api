@@ -3,51 +3,61 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link re="stylesheet" href="stylesheet.css">
         <title>Overwatch Developer API</title>
-        <style>
-            
-        </style>
-        
     </head>
     <body>
-        
         <nav class="navbar navbar-dark bg-primary mb-3">
             <div class="container">
                 <a href="#" class="navbar-brand">Overwatch API</a>
             </div>
         </nav>
 
-        <ul class="nav nav-tab"  role="tablist">
-            <li class="nav-item"><a class="nav-link active" id="hero-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">Overwatch Heroes</a></li>
-            <li class="nav-item"><a class="nav-link" id="search-tab" data-toggle="tab" href="#" role="tab" aria-controls="profile" aria-selected="true">Search Battle.net</a></li>
-            <li class="nav-item"><a class="nav-link" id="owl-tab" data-toggle="tab" href="#" role="tab" aria-controls="owl" aria-selected="true" >Overwatch League</a></li>
+        <ul class="nav nav-tab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="hero-tab" data-toggle="tab" href="#" role="tab">Overwatch Heroes</a></li>
+            <li class="nav-item">
+                <a class="nav-link" id="search-tab" data-toggle="tab" href="#" role="tab">Search Battle.net</a></li>
+            <li class="nav-item">
+                <a class="nav-link" id="owl-tab" data-toggle="tab" href="#" role="tab">Overwatch League</a></li>
         </ul>
 
-        <div class="heroes" onload="index.js"></div>  
+        <div class="heroes">
+            <script type="text/javascript"></script>
+        </div>  
         
-        <!-- <div class="battlenet">
+        <div class="battlenet">
             <section>
                 <div class="container searchContainer">
                     <div class="search card card-body">
-                        <h1>Search Blizzard Battletag</h1>
-                        <p class="lead">Enter a username</p>
-                        <input type="text" class="form-control" id="battletag"  placeholder="format: Battletag-BattleId ex. (GamerTag-XXXXX)">
+                        <h1>Search Battle.net</h1>
+                        <p class="lead">Enter Battletag</p>
+                        <input type="text" class="form-control" id="battletag"  placeholder="Battletag-23741">
                     </div>
                 </div>
             </section>
-        </div>         -->
+            <script type="text/javascript">
+
+            </script>
+        </div>        
         
-        <!-- <div class="league">
+        <div class="league">
             <section>
                 <h1>World Map</h1>
+                <div class="map"></div>
             </section>
             <section>
                 <h1>Overwatch League Schedule</h1>
+                <div class="schedule"></div>
             </section>
-        </div>     -->
+            <script type="text/javascript">
+
+            </script>
+        </div>    
         
-            <!-- Bootstrap core JavaScript
-        ================================================== -->
+            <!-- Bootstrap core JavaScript -->
+        <!-- ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
