@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang=""en">
     <head>
+        <title>Overwatch Developer API</title>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link re="stylesheet" href="stylesheet.css">
-        <title>Overwatch Developer API</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script type="text/javascript" src="index.js"></script>
+
     </head>
     <body>
         <nav class="navbar navbar-dark bg-primary mb-3">
@@ -23,50 +28,73 @@
                 <a class="nav-link" id="owl-tab" data-toggle="tab" href="#" role="tab">Overwatch League</a></li>
         </ul>
 
-        <div class="heroes">
-            <script type="text/javascript"></script>
-        </div>  
-        
-        <div class="battlenet">
-            <section>
-                <div class="container searchContainer">
-                    <div class="search card card-body">
-                        <h1>Search Battle.net</h1>
-                        <p class="lead">Enter Battletag</p>
-                        <input type="text" class="form-control" id="battletag"  placeholder="Battletag-23741">
+        <main>
+            <!-- <div class="heroes">
+                <script type="text/javascript">
+                    // toggle links
+                    // display heroes
+                </script>
+            </div>  
+            
+            <div class="battlenet">
+                <section>
+                    <div class="container searchContainer">
+                        <div class="search card card-body">
+                            <h1>Search Battle.net</h1>
+                            <p class="lead">Enter Battletag</p>
+                            <input type="text" class="form-control" id="battletag"  placeholder="Battletag-23741">
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <script type="text/javascript">
+                    // disable link
+                    // add mouse hover and click listener
+                </script>
+            </div>         -->
+            <div id="map"></div>
             <script type="text/javascript">
-
+                // disable link
+                // display google map api
+                function initMap() {
+                    // get the location of the match
+                    const philadelphia = [39.95278, -75.16361]
+                    const location = {lat: 39.95278, lng: -75.16361};
+                    const map = new google.maps.Map(
+                        $("#map", {
+                            zoom: 4,
+                            center: location,
+                        })
+                    )
+                    const marker = new google.maps.Marker({
+                        position: location,
+                        map: map,
+                    })
+                }
+                // fetch owl schedule
+                window.initMap = initMap
             </script>
-        </div>        
-        
-        <div class="league">
-            <section>
-                <h1>World Map</h1>
-                <div class="map"></div>
-            </section>
-            <section>
-                <h1>Overwatch League Schedule</h1>
-                <div class="schedule"></div>
-            </section>
-            <script type="text/javascript">
 
-            </script>
-        </div>    
-        
+            <!-- <div class="league">
+                <section>
+                    <h1>World Map</h1>
+                    
+                    <h1>Overwatch League Schedule</h1>
+                    <div id="schedule"></div>
+                </section>
+               
+            </div> -->
+
+        </main>
+
+         
             <!-- Bootstrap core JavaScript -->
         <!-- ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <script type="text/javascript" src="index.js"></script>
-
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </body>
 </html>
