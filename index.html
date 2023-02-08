@@ -29,13 +29,70 @@
         </ul>
 
         <main>
-            <!-- <div class="heroes">
+            <div class="heroes">
                 <script type="text/javascript">
-                    // toggle links
-                    // display heroes
+                    $("#hero-tab").click(() => {
+                        // display characters
+                    })
                 </script>
             </div>  
-            
+            <section>
+                <form>
+                    <fieldset>
+                        <label for="mode">Mode
+                            <select>
+                                <option value="">(Select Mode)</option>
+                                <option value="control">Control</option>
+                                <option value="escort">Escort</option>
+                                <option value="hybrid">Hybrid</option>
+                                <option value="push">Push</option>
+                                <option value="ctf">Capture the Flag</option>
+                                <option value="deathmatch">DeathMatch</option>
+                                <option value="control">Control</option>
+                                <option value="control">Control</option>
+                                <option value="control">Control</option>
+                            </select>
+                        </label>
+                        <label for="map">Map
+                            <select>
+                                <option value="">(Select Map)</option>
+                                <option value="busan">Busan</option>
+                                <option value="ilios">Ilios</option>
+                                <option value="lijiang">Lijiang Tower</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="oasis">Oasis</option>
+                                <option value="antartica">Antarctica</option>
+                                <option value="circuit">Circuit Royal</option>
+                                <option value="dorado">Dorado</option>
+                                <option value="havana">Havana</option>
+                                <option value="junkertown">Junkertown</option>
+                                <option value="rialto">Rialto</option>
+                                <option value="route66">Route 66</option>
+                                <option value="shambali">Shambali Monastery</option>
+                                <option value="watchpoint">Watchpoint: Gibraltar</option>
+                                <option value="blizzard">Blizzard World</option>
+                                <option value="eichenwalde">Eichenwalde</option>
+                                <option value="hollywood">Hollywood</option>
+                                <option value="kingsrow">King's Row</option>
+                                <option value="midtown">Midtown</option>
+                                <option value="numbani">Numbani</option>
+                                <option value="paraiso">Paraiso</option>
+                                <option value="colosseo">Colosseo</option>
+                                <option value="esperanca">Esperanca</option>
+                                <option value="newqueenst">New Queen Stree</option>
+                            </select>
+                        </label>
+                        <label for="victory">Victory<input id="victory" type="checkbox"></label>
+                        <label for="time">Time<input id="time" type="text"></label>
+                        <label for="elim">Elimination<input id="elim" type="number"></label>
+                        <label for="assist">Assist<input id="assist" type="number"></label>
+                        <label for="death">Death<input id="assist" type="number"></label>
+                        <label for="damage">Damage<input id="assist" type="number"></label>
+                        <label for="heal">Heal<input id="assist" type="number"></label>
+                        <label for="mitigation">Mitigation<input id="assist" type="number"></label>
+                    </fieldset>
+                </form>
+            </section>
             <div class="battlenet">
                 <section>
                     <div class="container searchContainer">
@@ -50,7 +107,7 @@
                     // disable link
                     // add mouse hover and click listener
                 </script>
-            </div>         -->
+            </div>        
             <div id="map"></div>
             <script type="text/javascript">
                 // disable link
