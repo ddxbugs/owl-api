@@ -32,15 +32,11 @@
         </ul>
 
         <main>
-            <div class="heroes">
-                <script type="text/javascript">
-                    // $("#hero-tab").click(() => {
-                    //     // display characters
-                    // })
-                </script>
-            </div>  
+
+            <div class="heroes"></div>  
+            
             <section>
-                <form>
+                <form action="/action_page.php">
                     <fieldset>
                         <label for="map">Map
                             <select>
@@ -72,29 +68,49 @@
                             </select>
                         </label>
                         <label for="victory">Victory<input id="victory" type="checkbox"></label>
-                        <label for="time">Time<input id="time" type="text"></label>
+                        <label for="time">Time<input id="time" type="text" placeholder="00:00 - 59:59" pattern="[0-5][0-9]:[0-5][0-9]"></label>
                         
                     </fieldset>
-                    <table id="table-data"></table>
+                    
+                    <table id="table-data">
+                        <caption>Submit Mystery Heroes Match Results</caption>
+                        <colgroup>
+                            <col>
+                            <col span="10" class="col-elim">
+                            <col span="10" class="col-assist"
+                            <col span="10" class="col-death">
+                            <col span="10" class="col-dmg">
+                            <col span="10" class="col-heal">
+                            <col span="10" class="mit">
+                            <tr>
+                                <th></th>
+                                <td>Elimination</td>
+                                <td>Assists</td>
+                                <td>Deaths</td>
+                                <td>Damage</td>
+                                <td>Heal</td>
+                                <td>Mitigation</td>
+                                
+                            </tr>
+                        </colgroup>
+                    </table>
+                    <input type="submit" value="Send" id="b1">
                 </form>
             </section>
             <script type="text/javascript">
-                const headerArray = ["Player", "Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
+                const headerArray = ["Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
                 var table = document.getElementById("table-data")
-                for (let i = 0; i < headerArray.length; i++) {
-                    var col = document.createElement("th")
-                    col.innerHTML = "<td>" + "<label>" + headerArray[i] + "</label></td>"
-                    table.append(col)
-                }
+
                 for (let i = 1; i <= 10; i++) {
                     var row = document.createElement("tr")
-                    row.innerHTML += `${i}` + "<td>" + "<label>" + "<input type='text' class=" + `${headerArray[0]}` + ">"
-                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[1]}`>"
-                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[2]}`>"
-                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[3]}`>"
-                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[4]}`>"
-                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[5]}`>"
-                    row.innerHTML += "</label></td>"
+                    row.innerHTML += "<th scope='row'>" + `${i}` + "</th>" 
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[0]}` + "></td>"
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[1]}` + "></td>"
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[2]}` + "></td>"
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[3]}` + "></td>"
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[4]}` + "></td>"
+                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[5]}` + "></td>"
+                
                     table.append(row)
                 }
             </script>
