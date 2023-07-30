@@ -34,9 +34,9 @@
         <main>
             <div class="heroes">
                 <script type="text/javascript">
-                    $("#hero-tab").click(() => {
-                        // display characters
-                    })
+                    // $("#hero-tab").click(() => {
+                    //     // display characters
+                    // })
                 </script>
             </div>  
             <section>
@@ -73,15 +73,20 @@
                         </label>
                         <label for="victory">Victory<input id="victory" type="checkbox"></label>
                         <label for="time">Time<input id="time" type="text"></label>
-                        <label for="elim">Elimination<input id="elim" type="number"></label>
-                        <label for="assist">Assist<input id="assist" type="number"></label>
-                        <label for="death">Death<input id="assist" type="number"></label>
-                        <label for="damage">Damage<input id="assist" type="number"></label>
-                        <label for="heal">Heal<input id="assist" type="number"></label>
-                        <label for="mitigation">Mitigation<input id="assist" type="number"></label>
+                        
                     </fieldset>
+                    <table id="table-data"></table>
                 </form>
             </section>
+            <script type="text/javascript">
+                const headerArray = ["Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
+                var table = document.getElementById("table-data")
+                for (let i = 0; i < headerArray.length; i++) {
+                    var col = document.createElement("th")
+                    col.innerHTML = "<td>" + "<label>" + headerArray[i] + "</label></td>"
+                    table.append(col)
+                }
+            </script>
             <div class="battlenet">
                 <section>
                     <div class="container searchContainer">
