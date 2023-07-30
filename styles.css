@@ -59,11 +59,13 @@ ul li a {
   font-size: 20px;
 }
 
-#table-data {
-  margin: auto;
+table, th, tr {
   font-family: Overwatch;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 0;
 }
 
 th {
-  padding-left: 100px;
+  border: 1px solid black;
 }
