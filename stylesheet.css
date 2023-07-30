@@ -13,6 +13,11 @@ f99e1a
 218ffe
 */
 
+fieldset label {
+  margin: auto;
+  padding-left: 40px;
+}
+
 /* Set the size of the div element that contains the map */
 #map {
     height: 400px;
@@ -52,4 +57,13 @@ ul li a {
   font-family: Overwatch;
   border-radius: 50px;
   font-size: 20px;
+}
+
+#table-data {
+  margin: auto;
+  font-family: Overwatch;
+}
+
+th {
+  padding-left: 100px;
 }
