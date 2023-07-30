@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang=""en">
     <head>
-        <title>Overwatch Developer API</title>
+        
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +9,10 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
 
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-        <script type="text/javascript" src="index.js"></script>
-
+        
+        <!-- <script type="text/javascript" src="index.js"></script> -->
+        
+        <title>Overwatch Developer API</title>
     </head>
     <body>  
         <nav class="navbar navbar-dark bg-primary mb-3">
@@ -32,12 +34,30 @@
         </ul>
 
         <main>
-
+            <!-- Overwatch Heroes -->
             <div class="heroes"></div>  
             
-            <section>
+            <!-- Search Battle.net -->
+            <div class="battlenet">
+                <section>
+                    <div class="container searchContainer">
+                        <div class="search card card-body">
+                            <h1>Search Battle.net</h1>
+                            <p class="lead">Enter Battletag</p>
+                            <input type="text" class="form-control" id="battletag"  placeholder="Battletag-23741">
+                        </div>
+                    </div>
+                </section>
+            </div>
+        
+            <!-- Overwatch League -->
+            <div id="league"></div>
+
+            <!-- OWL Trainer -->
+            <div id="trainer">
                 <form action="/action_page.php">
                     <fieldset>
+                        <label>Competitive Mode<input type="checkbox" id="mode"></label>
                         <label for="map">Map
                             <select>
                                 <option value="">(Select Map)</option>
@@ -96,76 +116,20 @@
                     </table>
                     <input type="submit" value="Send" id="b1">
                 </form>
-            </section>
-            <script type="text/javascript">
-                const headerArray = ["Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
-                var table = document.getElementById("table-data")
-
-                for (let i = 1; i <= 10; i++) {
-                    var row = document.createElement("tr")
-                    row.innerHTML += "<th scope='row'>" + `${i}` + "</th>" 
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[0]}` + " pattern='[0-99999]'></td>"
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[1]}` + " pattern='[0-99999]'></td>"
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[2]}` + " pattern='[0-99999]'></td>"
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[3]}` + " pattern='[0-99999]'></td>"
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[4]}` + " pattern='[0-99999]'></td>"
-                    row.innerHTML += "<td><input type='text' id=" + `${i}` + " class=" + `${headerArray[5]}` + " pattern='[0-99999]'></td>"
-                
-                    table.append(row)
-                }
-            </script>
-            <div class="battlenet">
-                <section>
-                    <div class="container searchContainer">
-                        <div class="search card card-body">
-                            <h1>Search Battle.net</h1>
-                            <p class="lead">Enter Battletag</p>
-                            <input type="text" class="form-control" id="battletag"  placeholder="Battletag-23741">
-                        </div>
-                    </div>
-                </section>
-                <script type="text/javascript">
-                    // disable link
-                    // add mouse hover and click listener
-                </script>
-            </div>        
-            <div id="map"></div>
-            <script type="text/javascript">
-                // disable link
-                // display google map api
-                function initMap() {
-                    // get the location of the match
-                    const philadelphia = [39.95278, -75.16361]
-                    const location = {lat: 39.95278, lng: -75.16361};
-                    const map = new google.maps.Map(
-                        $("#map", {
-                            zoom: 4,
-                            center: location,
-                        })
-                    )
-                    const marker = new google.maps.Marker({
-                        position: location,
-                        map: map,
-                    })
-                }
-                // fetch owl schedule
-                window.initMap = initMap
-            </script>
-
-            <!-- <div class="league">
-                <section>
-                    <h1>World Map</h1>
-                    
-                    <h1>Overwatch League Schedule</h1>
-                    <div id="schedule"></div>
-                </section>
-               
-            </div> -->
-
+            </div>
         </main>
 
+        <!-- Overwatch Heroes -->
+        <script type="text/javascript" src=""></script>
+        <!-- Search Battle.net -->
+        <script type="text/javascript" src="js/profile.js"></script>
+        <!-- Overwatch Leauge -->
+        <script type="text/javascript" src="js/league.js"></script>
+        <!-- Overwatch Trainer -->
+        <script type="text/javascript" src="js/train.js"></script>
+
          
-            <!-- Bootstrap core JavaScript -->
+        <!-- Bootstrap core JavaScript -->
         <!-- ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -174,5 +138,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
     </body>
 </html>
