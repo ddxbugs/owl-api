@@ -6,13 +6,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
 
         <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <script type="text/javascript" src="index.js"></script>
 
     </head>
-    <body>
+    <body>  
         <nav class="navbar navbar-dark bg-primary mb-3">
             <div class="container">
                 <h1>Overwatch API</h1>
@@ -79,12 +79,23 @@
                 </form>
             </section>
             <script type="text/javascript">
-                const headerArray = ["Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
+                const headerArray = ["Player", "Elimination", "Assist", "Death", "Damage", "Heal", "Mitigation"]
                 var table = document.getElementById("table-data")
                 for (let i = 0; i < headerArray.length; i++) {
                     var col = document.createElement("th")
                     col.innerHTML = "<td>" + "<label>" + headerArray[i] + "</label></td>"
                     table.append(col)
+                }
+                for (let i = 1; i <= 10; i++) {
+                    var row = document.createElement("tr")
+                    row.innerHTML += `${i}` + "<td>" + "<label>" + "<input type='text' class=" + `${headerArray[0]}` + ">"
+                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[1]}`>"
+                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[2]}`>"
+                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[3]}`>"
+                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[4]}`>"
+                    row.innerHTML += "<input type='text' id=`${i}` class=`${headerArray[5]}`>"
+                    row.innerHTML += "</label></td>"
+                    table.append(row)
                 }
             </script>
             <div class="battlenet">
